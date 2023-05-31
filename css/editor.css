@@ -1,0 +1,45 @@
+
+.wordcamp-panel-session-info .components-base-control {
+	margin-bottom: 16px;
+}
+
+.wordcamp-panel-session-info .components-datetime__time {
+	padding-bottom: 0;
+}
+
+.wordcamp-panel-session-info .components-datetime__time .components-button,
+.wordcamp-panel-session-info .components-datetime__time input[type="number"],
+.wordcamp-panel-session-info .components-datetime__time select {
+	height: 30px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.wordcamp-panel-session-info__duration-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.wordcamp-panel-session-info__duration label {
+	margin-left: 4px;
+}
+
+.wordcamp-panel-session-info__duration input {
+	-moz-appearance: textfield;
+	max-width: 3rem;
+}
+
+.wordcamp-panel-session-info__duration label + input {
+	margin-left: 8px;
+}
+
+.wordcamp-panel-session-speakers .components-form-token-field__help {
+	display: none;
+}
+
+.wc-panel-organizer-info .components-notice,
+.wc-panel-speaker-info .components-notice {
+	margin-left: 0;
+	margin-right: 0;
+}
