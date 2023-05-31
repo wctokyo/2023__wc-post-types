@@ -331,7 +331,11 @@ class WordCamp_Post_Types_Plugin {
 			? require( $deps_path )
 			: array(
 				'dependencies' => array(),
-				'version' => filemtime( $full_path ),
+				/**
+				 * 2023.05.31 エラー回避のためにバージョン取得のためのファイル生成時間を定数化
+				 */
+				// 'version' => filemtime( $full_path ),
+				'version'      => 2023,
 			);
 
 		wp_register_script(
