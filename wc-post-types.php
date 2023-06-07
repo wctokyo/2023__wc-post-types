@@ -10,9 +10,12 @@ require_once 'inc/favorite-schedule-shortcode.php';
 require_once 'inc/privacy.php';
 require_once 'inc/deprecated.php';
 
-use function WordCamp\Post_Types\Utilities\get_avatar_or_image;
-use function WordCamp\Theme_Templates\site_supports_block_templates;
-use function WordCamp\Blocks\has_block_with_attrs;
+/**
+ * 2023.06.07 外部関数読み込みをキャンセル
+ */
+// use function WordCamp\Post_Types\Utilities\get_avatar_or_image;
+// use function WordCamp\Theme_Templates\site_supports_block_templates;
+// use function WordCamp\Blocks\has_block_with_attrs;
 
 // Bitwise mask for the sessions CPT, to add endpoints to the session pages. This should be a unique power of 2
 // greater than the core-defined ep_masks, but could potentially conflict with another plugin.
@@ -765,7 +768,11 @@ class WordCamp_Post_Types_Plugin {
 		global $post;
 		$enabled_site_ids = apply_filters( 'wcpt_speaker_post_avatar_enabled_site_ids', array( 364 ) );    // 2014.sf
 
-		if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_speaker') ) {
+		/**
+		 * 2023.06.07 関数 site_supports_block_templates を削除
+		 */
+		// if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_speaker') ) {
+		if ( ! $this->is_single_cpt_post( 'wcb_speaker') ) {
 			return $content;
 		}
 
@@ -799,7 +806,12 @@ class WordCamp_Post_Types_Plugin {
 		global $post;
 		$enabled_site_ids = apply_filters( 'wcpt_session_post_speaker_info_enabled_site_ids', array( 364 ) );    // 2014.sf
 
-		if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session') ) {
+
+		/**
+		 * 2023.06.07 関数 site_supports_block_templates を削除
+		 */
+		// if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session') ) {
+		if ( ! $this->is_single_cpt_post( 'wcb_session') ) {
 			return $content;
 		}
 
@@ -879,7 +891,12 @@ class WordCamp_Post_Types_Plugin {
 			)
 		);
 
-		if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session' ) ) {
+
+		/**
+		 * 2023.06.07 関数 site_supports_block_templates を削除
+		 */
+		// if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session' ) ) {
+		if ( ! $this->is_single_cpt_post( 'wcb_session' ) ) {
 			return $content;
 		}
 
@@ -930,7 +947,11 @@ class WordCamp_Post_Types_Plugin {
 			)
 		);
 
-		if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session' ) ) {
+		/**
+		 * 2023.06.07 関数 site_supports_block_templates を削除
+		 */
+		// if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session' ) ) {
+		if ( ! $this->is_single_cpt_post( 'wcb_session' ) ) {
 			return $content;
 		}
 
@@ -968,7 +989,11 @@ class WordCamp_Post_Types_Plugin {
 	public function add_session_categories_to_session_posts( $content ) {
 		global $post;
 
-		if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session' ) ) {
+		/**
+		 * 2023.06.07 関数 site_supports_block_templates を削除
+		 */
+		// if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_session' ) ) {
+		if ( ! $this->is_single_cpt_post( 'wcb_session' ) ) {
 			return $content;
 		}
 
@@ -1027,7 +1052,11 @@ class WordCamp_Post_Types_Plugin {
 		global $post;
 		$enabled_site_ids = apply_filters( 'wcpt_speaker_post_session_info_enabled_site_ids', array( 364 ) );    // 2014.sf
 
-		if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_speaker') ) {
+		/**
+		 * 2023.06.07 関数 site_supports_block_templates を削除
+		 */
+		// if ( site_supports_block_templates() || ! $this->is_single_cpt_post( 'wcb_speaker') ) {
+		if ( ! $this->is_single_cpt_post( 'wcb_speaker') ) {
 			return $content;
 		}
 
